@@ -48,7 +48,7 @@ function FlashCards() {
 
     function handleClick(id) {
         setSelectedId(id !== selectedId ? id : null)
-    }
+    } 
 
     return (
         <div className="flashcards">
@@ -57,7 +57,8 @@ function FlashCards() {
               <div
                   key={question.id}
                   onClick={() => handleClick(question.id)}
-                  className={question.id === selectedId ? "selected" : ""}>
+                  className={question.id === selectedId ? "selected" : ""}
+              >
                   <p>
                       {
                         question.id === selectedId ? question.answer
